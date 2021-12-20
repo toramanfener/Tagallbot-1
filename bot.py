@@ -21,7 +21,17 @@ spam_chats = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply(
-    "__**I'm MentionAll Bot**, add your group my commands /mentionall, /cancel. this bot any bug contact support 👻\nClick **/help**  ",
+"""ʜᴏɪ,
+ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ TAGALL ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ᴀɴᴅ ɪ ᴍ ᴠᴇʀʏ ᴘᴏᴡᴇʀꜰᴜʟʟ ʙᴏᴛ! 
+*𝐇𝐄𝐘! {},*
+┏━━━━━━━━━━━━━━━━
+┣ ₪ *Uptime:* `{}`
+┣ ₪ `{}` *users, across* `{}` *chats.*
+┗━━━━━━━━━━━━━━━━━
+ 
+  ʜɪᴛ /help **FOR MORE**
+ [❤](https://telegra.ph/file/2fa3a833f3ccc1d98dba1.jpg),
+"""
     link_preview=False,
     buttons=(
       [
