@@ -23,10 +23,10 @@ async def start(event):
   await event.reply(
 """ʜᴏɪ,
 ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ TAGALL ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ᴀɴᴅ ɪ ᴍ ᴠᴇʀʏ ᴘᴏᴡᴇʀꜰᴜʟʟ ʙᴏᴛ! 
-*𝐇𝐄𝐘! {},*
+*𝐇𝐄𝐘! ,*
 ┏━━━━━━━━━━━━━━━━
-┣ ₪ *Uptime:* `{}`
-┣ ₪ `{}` *users, across* `{}` *chats.*
+┣ ₪ *ADD ME YOUR GROUP* `
+┣ ₪ IAM POWER FULL TAGGER BOT
 ┗━━━━━━━━━━━━━━━━━
  
   ʜɪᴛ /help **FOR MORE**
@@ -43,7 +43,7 @@ async def start(event):
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Help Menu of MentionAllBot**\n\nCommand: /mentionall\n__You can use this command with text what you want to mention others.__\n`Example: /mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\nFollow [@AnjanaMadu](https://github.com/AnjanaMadu) on Github"
+  helptext = "**Help Menu of MentionAllBot**\n\nCommand: /mentionall\n__You can use this command with text what you want to mention others.__\n`Example: /mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\n"
   await event.reply(
     helptext,
     link_preview=False,
