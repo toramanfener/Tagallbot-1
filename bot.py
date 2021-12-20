@@ -36,7 +36,7 @@ async def start(event):
     buttons=(
       [
         Button.url('ᴀᴅᴅ TAGGER ʀᴏʙᴏᴛ ᴛᴏ ᴜʀ ᴄʜᴀᴛ',"t.me/chuckymusic_bot?startgroup=true")
-        Button.url('support', 'https://t.me/chucky_support'),
+        Button.url('support', 'https://t.me/chucky_support')
         Button.url('creater', 'https://t.me/kittu_the_criminall')
       ]
     )
