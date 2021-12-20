@@ -34,10 +34,16 @@ async def start(event):
 """,
     link_preview=False,
     buttons=(
-      [
-        Button.url('ᴀᴅᴅ TAGGER ʀᴏʙᴏᴛ ᴛᴏ ᴜʀ ᴄʜᴀᴛ',"t.me/chuckymusic_bot?startgroup=true")
-        Button.url('support', 'https://t.me/chucky_support')
-      ]
+       [
+        InlineKeyboardButton(
+              text="😌ᴀᴅᴅ 𝒄𝒉𝒖𝒄𝒌𝒚 ʀᴏʙᴏᴛ ᴛᴏ ᴜʀ ᴄʜᴀᴛ🤖", url="t.me/chuckymusic_bot?startgroup=true"),
+    ],
+    [
+        InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇꜱ", url=f"https://t.me/thanimaibots"),
+        InlineKeyboardButton(
+            text="MY FRND🤡", url=f"https://t.me/FINAL_STRIKER_BOT"
+        ),
+    ],
     )
   )
 
