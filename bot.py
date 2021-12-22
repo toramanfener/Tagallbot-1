@@ -21,22 +21,22 @@ spam_chats = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply(
-"""ʜᴏɪ,
-ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ TAGALL ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ᴀɴᴅ ɪ ᴍ ᴠᴇʀʏ ᴘᴏᴡᴇʀꜰᴜʟʟ ʙᴏᴛ! 
+"""Merhaba,
+Ben gruplarınız için geliştirilmiş özel tag botuyum! 
 *𝐇𝐄𝐘! ,*
 ┏━━━━━━━━━━━━━━━━
-┣ ₪ *ADD ME YOUR GROUP* `
-┣ ₪ IAM POWER FULL TAGGER BOT
+┣ ₪ *BENİ BİR GRUBA EKLE* `
+┣ ₪ GEREKLİ YETKİLERİ VERİP /RELOAD KOMUTUNU KULLAN
 ┗━━━━━━━━━━━━━━━━━
  
-  ʜɪᴛ /help **FOR MORE**
+  Burdan /help **DESTEK ALABİLİRSİNİZ**
  [❤](https://telegra.ph/file/2fa3a833f3ccc1d98dba1.jpg),
 """,
     link_preview=False,
     buttons=(
        [
-        Button.url(' support', 'https://t.me/chucky_support'),
-        Button.url('creater', 'https://t.me/kittu_the_criminall')
+        Button.url(' Grup', 'https://t.me/SamataSohbet'),
+        Button.url('Sahip', 'https://t.me/Dnztrmn')
     ],
     )
   )
@@ -49,17 +49,17 @@ async def help(event):
     link_preview=False,
     buttons=(
       [
-        Button.url(' support', 'https://t.me/chucky_support'),
-        Button.url('creater', 'https://t.me/kittu_the_criminall')
+        Button.url(' Grup', 'https://t.me/SamataSohbet'),
+        Button.url('Sahip', 'https://t.me/Dnztrmn')
       ]
     )
   )
   
-@client.on(events.NewMessage(pattern="^/mentionall ?(.*)"))
+@client.on(events.NewMessage(pattern="^/etiketle ?(.*)"))
 async def mentionall(event):
   chat_id = event.chat_id
   if event.is_private:
-    return await event.respond("__This command can be use in groups and channels!__")
+    return await event.respond("__Bu komut gruplarda ve kanallarda kullanılabilir!__")
   
   is_admin = False
   try:
@@ -81,10 +81,10 @@ async def mentionall(event):
     ):
       is_admin = True
   if not is_admin:
-    return await event.respond("__Only admins can mention all!__")
+    return await event.respond("__Yalnızca yöneticiler etiketleme işlemi başlatabilir!__")
   
   if event.pattern_match.group(1) and event.is_reply:
-    return await event.respond("__Give me one argument!__")
+    return await event.respond("__Bana lütfen hangi konuda etiketleme islemi başlatıcağımı belirle!__")
   elif event.pattern_match.group(1):
     mode = "text_on_cmd"
     msg = event.pattern_match.group(1)
@@ -92,9 +92,9 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = await event.get_reply_message()
     if msg == None:
-        return await event.respond("__I can't mention members for older messages! (messages which are sent before I'm added to group)__")
+        return await event.respond("__Eski mesajlar için üyelerden bahsedemem (Gruba eklenmeden önce gönderilen mesajlar)__")
   else:
-    return await event.respond("__Reply to a message or give me some text to mention others!__")
+    return await event.respond("__Bir mesajı yanıtlayın yada bana tüm kullanıcıları etiketlemem için bir metin belirtin!__")
   
   spam_chats.append(chat_id)
   usrnum = 0
@@ -118,16 +118,16 @@ async def mentionall(event):
   except:
     pass
 
-@client.on(events.NewMessage(pattern="^/cancel$"))
+@client.on(events.NewMessage(pattern="^/iptal$"))
 async def cancel_spam(event):
   if not event.chat_id in spam_chats:
-    return await event.respond('__There is no proccess on going...__')
+    return await event.respond('__Devam eden islem yok...__')
   else:
     try:
       spam_chats.remove(event.chat_id)
     except:
       pass
-    return await event.respond('__Stopped.__')
+    return await event.respond('__İşlem başarıyla bitirildi.__')
 
-print(">> BOT STARTED <<")
+print(">> Bot başlatıldı <<")
 client.run_until_disconnected()
