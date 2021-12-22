@@ -32,15 +32,27 @@ async def start(event):
   ʜɪᴛ /help **FOR MORE**
  [❤](https://telegra.ph/file/2fa3a833f3ccc1d98dba1.jpg),
 """,
-    link_preview=False,
-    buttons=(
-       [
-       InlineKeyboardButton(
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
                         "➕ Beni Grubuna Ekle ➕",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",)
-        Button.url(' support', 'https://t.me/chucky_support'),
-        Button.url('creater', 'https://t.me/kittu_the_criminall')
-    ],
+                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                    )
+                ],
+                [InlineKeyboardButton("❓ Temel Kılavuz", callback_data="cbhowtouse")],
+                [
+                    InlineKeyboardButton("📚 Komutlar", callback_data="cbcmds"),
+                    InlineKeyboardButton("❤️ Sahip", url=f"https://t.me/Dnztrmn"),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "👥 Sohbet Grubu", url=f"https://t.me/SamataSohbet"
+                    ),
+                    InlineKeyboardButton(
+                        "📣 Kanal", url=f"https://t.me/Yalnzadmlr"
+                    ),
+                ],
     )
   )
 
