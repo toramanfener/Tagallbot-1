@@ -35,7 +35,6 @@ Ben Gruplarınız İçin Gelistirilmiş Tubidy Tag Botuyum Beni Gruplarinıza Ek
     link_preview=False,
     buttons=(
        [
-        Button.url(' Gruba Ekle', 'https://t.me/tubidytagbot?startgroup=true')
         Button.url(' Grup', 'https://t.me/SamataSohbet'),
         Button.url('Sahip', 'https://t.me/Dnztrmn')
     ],
