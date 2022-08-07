@@ -22,7 +22,7 @@ spam_chats = []
 async def start(event):
   await event.reply(
 """Merhaba,
-Ben Gruplarınız İçin Gelistirilmiş Tubidy Tag Botuyum Beni Gruplarinıza Ekleyerek Güvenli Sekilde Kullanabilirsiniz!  
+Ben Gruplarınız İçin Gelistirilmiş Tag Botuyum Beni Gruplarinıza Ekleyerek Güvenli Şekilde Kullanabilirsiniz!  
 *Oku! ,*
 ┏━━━━━━━━━━━━━━━━
 ┣ ₪ *Beni Gruba Ekle* `
@@ -35,8 +35,8 @@ Ben Gruplarınız İçin Gelistirilmiş Tubidy Tag Botuyum Beni Gruplarinıza Ek
     link_preview=False,
     buttons=(
        [
-        Button.url(' Grup', 'https://t.me/SamataSohbet'),
-        Button.url('Sahip', 'https://t.me/Dnztrmn')
+        Button.url(' Grup', 'https://t.me/keyfialemtr'),
+        Button.url('Sahip', 'https://t.me/Kannake')
     ],
     )
   )
@@ -49,8 +49,8 @@ async def help(event):
     link_preview=False,
     buttons=(
       [
-        Button.url(' Grup', 'https://t.me/SamataSohbet'),
-        Button.url('Sahip', 'https://t.me/Dnztrmn')
+        Button.url(' Grup', 'https://t.me/keyfialemtr'),
+        Button.url('Sahip', 'https://t.me/kannake')
       ]
     )
   )
