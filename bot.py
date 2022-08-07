@@ -43,7 +43,7 @@ Ben Gruplarınız İçin Gelistirilmiş Tag Botuyum Beni Gruplarinıza Ekleyerek
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "KOMUTLAR:/etiketle,/iptal. Örnek /etiketle Günaydın"
+  helptext = "KOMUTLAR:/tag,/iptal. Örnek /tag Günaydın"
   await event.reply(
     helptext,
     link_preview=False,
@@ -55,7 +55,7 @@ async def help(event):
     )
   )
   
-@client.on(events.NewMessage(pattern="^/etiketle ?(.*)"))
+@client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def mentionall(event):
   chat_id = event.chat_id
   if event.is_private:
