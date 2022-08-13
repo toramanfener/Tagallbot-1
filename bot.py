@@ -36,7 +36,7 @@ Ben Gruplarınız İçin Gelistirilmiş Tag Botuyum Beni Gruplarinıza Ekleyerek
     buttons=(
        [
         Button.url(' Grup', 'https://t.me/keyfialemtr'),
-        Button.url('Sahip', 'https://t.me/Kannake')
+        Button.url('Sahip', 'https://t.me/Kanakke')
     ],
     )
   )
@@ -118,7 +118,7 @@ async def mentionall(event):
   except:
     pass
 
-@client.on(events.NewMessage(pattern="^/iptal$"))
+@client.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
   if not event.chat_id in spam_chats:
     return await event.respond('__Devam Eden Süreç Yok...__')
